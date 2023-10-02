@@ -38,10 +38,4 @@ vim.keymap.set("n", "<C-p>", function()
 	builtin.git_files({ recurse_submodules = true, use_git_root = true })
 end)
 
-local onedark = require("onedark")
-onedark.setup({
-	style = "darker"
-})
-onedark.load()
-
 return {}
