@@ -1,13 +1,5 @@
 local dap = require("dap")
 
-local dap = require("dap")
-
-dap.adapters.cppdbg = {
-	id = "cppdbg",
-	type = "executable",
-	command = "/home/sebastjanahtik/DAPs/cpptools-linux/extension/debugAdapters/bin/OpenDebugAD7"
-}
-
 dap.configurations.cpp = {
 	{
 		name = "Launch file",
@@ -20,7 +12,7 @@ dap.configurations.cpp = {
 		stopAtEntry = true,
 	},
 	{
-		name = "Attach to gdbserver :1234",
+		name = "Attach to gdbserver hostname:port",
 		type = "cppdbg",
 		request = "launch",
 		MIMode = "gdb",
