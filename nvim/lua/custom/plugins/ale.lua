@@ -1,5 +1,6 @@
 vim.g.ale_use_neovim_diagnostics_api = 1
-vim.g.ale_disable_lsp = "auto"
+vim.g.ale_disable_lsp = 'auto'
+vim.g.ale_enabled = 0
 
 return {
 	'dense-analysis/ale',
