@@ -1,3 +1,6 @@
+vim.g.ale_use_neovim_diagnostics_api = 1
+vim.g.ale_disable_lsp = "auto"
+
 return {
 	'dense-analysis/ale',
 	on_attach = function(bufnr)
