@@ -172,7 +172,7 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     main = "ibl",
-    opts = {},
+    opts = { scope = { enabled = false }, },
   },
 
   -- "gc" to comment visual regions/lines
@@ -263,6 +263,9 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+vim.o.cursorline = true
+vim.o.cursorlineopt = 'number'
 
 -- [[ Basic Keymaps ]]
 
