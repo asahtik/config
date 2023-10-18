@@ -197,6 +197,11 @@ require('lazy').setup({
         end,
       },
     },
+    opts = {
+      defaults = {
+        wrap_results = true,
+      },
+    },
   },
 
   {
@@ -549,6 +554,7 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = {
+    { name = 'path' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
   },
