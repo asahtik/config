@@ -249,6 +249,8 @@ vim.o.mouse = 'a'
 -- Enable break indent
 vim.o.breakindent = true
 
+vim.o.tabstop = 4
+
 -- Save undo history
 vim.o.undofile = true
 
@@ -503,6 +505,7 @@ mason_lspconfig.setup {
 
 mason_lspconfig.setup_handlers {
   function(server_name)
+    -- if server_name == 'clangd' then capabilities.offsetEncoding = { 'utf-16' } end
     require('lspconfig')[server_name].setup {
       capabilities = capabilities,
       on_attach = on_attach,
@@ -530,7 +533,7 @@ cmp.setup {
     ['<C-p>'] = cmp.mapping.select_prev_item(),
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-o>'] = cmp.mapping.confirm {
+    ['<C-i>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
