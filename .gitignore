@@ -4,5 +4,7 @@
 nvim/.github
 !tmux
 !tmux/**
+!tmux-powerline
+!tmux-powerline/**
 tmux/plugins
 !.gitignore
